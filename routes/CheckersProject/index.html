@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Checkers Game</title>
+	<audio src="music/sound.mp3" autoplay loop></audio>
+	<script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link href="checkers.css" rel="stylesheet">
+	<script src="script.js"></script>
+</head>
+<body>
+	<span id="myId"></span><br>
+	<div id="connection" class="connection">
+		Connect to a peer: <input type="text" id="otherId" style="width: 250px;" placeholder="Someone else's id">
+		<input class="connect-button" type="button" value="Connect" id="connect">
+	</div>
+	<form action="/start" method="post" id="start">
+		<button class="undo-button" type="submit" id="undo"><img src="img/back_button.png" width="50" height="50"></button>
+	</form>
+	<div id="board">
+		<div class="boxes"></div>
+		<div class="pieces">
+			<div class="player1pieces">
+			</div>
+			<div class="player2pieces">
+			</div>
+		</div>
+	</div>
+	<div id="end-message" class="end-message"></div>
+	<div id="close-message" class="close-message">CONNECTION CLOSE!! </br> YOU WIN!!</div>
+</body>
+</html>
